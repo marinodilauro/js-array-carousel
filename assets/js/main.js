@@ -39,6 +39,7 @@ for (let i = 0; i < imageNames.length; i++) {
 const nextElement = document.querySelector(".next");
 const prevElement = document.querySelector(".prev");
 
+
 // Carousel control buttons management
 
 nextElement.addEventListener("click", function () {
@@ -56,7 +57,15 @@ nextElement.addEventListener("click", function () {
 
   allSlides[activeImage].classList.add("active");
 
-  console.log(activeImage);
+  //console.log(activeImage);
+
+  // Preview behaviour
+  const currentPreview = document.querySelector(".preview .active_preview");
+  currentPreview.classList.remove("active_preview");
+
+  const allPreviews = document.querySelectorAll(".preview img");
+
+  allPreviews[activeImage].classList.add("active_preview");
 
 });
 
@@ -75,6 +84,15 @@ prevElement.addEventListener("click", function () {
 
   allSlides[activeImage].classList.add("active");
 
-  console.log(activeImage);
+  //console.log(activeImage);
+
+  // Preview behaviour
+  const currentPreview = document.querySelector(".preview .active_preview");
+  currentPreview.classList.remove("active_preview");
+
+  const allPreviews = document.querySelectorAll(".preview img");
+
+  allPreviews[activeImage].classList.add("active_preview");
 
 });
+
