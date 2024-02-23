@@ -66,8 +66,8 @@
       object-fit: cover;
     }
 
-    .active_preview {
-      filter: invert(1);
+    img:not(.active_preview) {
+      filter: brightness(0.4);
     }
 
   }
