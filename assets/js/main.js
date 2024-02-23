@@ -1,11 +1,11 @@
 // Create a variable for the list of image names
 
 const imageNames = [
-  "01.jpg",
-  "02.jpg",
-  "03.jpg",
-  "04.jpg",
-  "05.jpg",
+  "01.webp",
+  "02.webp",
+  "03.webp",
+  "04.webp",
+  "05.webp",
 ];
 
 
@@ -25,6 +25,10 @@ for (let i = 0; i < imageNames.length; i++) {
 
   const image = imageNames[i];
 
-  console.log(image);
+  //console.log(image);
+
+  const imageMarkup = `<img class="${i === activeImage ? "active" : ""}" src="./assets/img/${image}" alt="">`
+
+  slideElement.insertAdjacentHTML("beforeend", imageMarkup);
 
 }
