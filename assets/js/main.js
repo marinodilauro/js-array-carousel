@@ -19,7 +19,7 @@ let activeImage = 0;
 const slideElement = document.querySelector(".slides");
 
 
-// Create a loop to iterate through all the images in the list
+// Create a loop to iterate through all the images in the list and shows image on screen
 
 for (let i = 0; i < imageNames.length; i++) {
 
@@ -32,3 +32,26 @@ for (let i = 0; i < imageNames.length; i++) {
   slideElement.insertAdjacentHTML("beforeend", imageMarkup);
 
 }
+
+
+// Create a variable for the carousel controls buttons
+
+const nextElement = document.querySelector(".next");
+const prevElement = document.querySelector(".prev");
+
+// Carousel control buttons management
+
+nextElement.addEventListener("click", function () {
+
+  activeImage++;
+
+  const currentImage = document.querySelector("img.active");
+  currentImage.classList.remove("active");
+
+  const allSlides = document.querySelectorAll(".slides img");
+
+  allSlides[activeImage].classList.add("active");
+
+  console.log(activeImage);
+
+});
