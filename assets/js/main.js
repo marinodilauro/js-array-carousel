@@ -45,6 +45,10 @@ nextElement.addEventListener("click", function () {
 
   activeImage++;
 
+  if (activeImage === imageNames.length) {
+    activeImage = 0;
+  }
+
   const currentImage = document.querySelector("img.active");
   currentImage.classList.remove("active");
 
@@ -59,6 +63,10 @@ nextElement.addEventListener("click", function () {
 prevElement.addEventListener("click", function () {
 
   activeImage--;
+
+  if (activeImage < 0) {
+    activeImage = imageNames.length - 1;
+  }
 
   const currentImage = document.querySelector("img.active");
   currentImage.classList.remove("active");
