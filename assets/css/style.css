@@ -24,9 +24,6 @@
 
   .slider {
 
-    position: relative;
-
-
     .slides {
       height: 100%;
 
@@ -40,25 +37,27 @@
       }
     }
 
-    .controls {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translate(0, -100%);
-
-      button {
-        background-color: rgba(255, 255, 255, 0.5);
-      }
-
-    }
-
   }
 
   .preview {
     height: 100%;
+    position: relative;
+
+    .controls {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%);
+
+      button {
+        background-color: rgba(255, 255, 255, 0.4);
+      }
+
+    }
 
     img {
       width: 200px;
