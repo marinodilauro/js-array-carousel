@@ -55,3 +55,18 @@ nextElement.addEventListener("click", function () {
   console.log(activeImage);
 
 });
+
+prevElement.addEventListener("click", function () {
+
+  activeImage--;
+
+  const currentImage = document.querySelector("img.active");
+  currentImage.classList.remove("active");
+
+  const allSlides = document.querySelectorAll(".slides img");
+
+  allSlides[activeImage].classList.add("active");
+
+  console.log(activeImage);
+
+});
