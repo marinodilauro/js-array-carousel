@@ -17,3 +17,14 @@ let activeImage = 0;
 // Create a variable for HTML slide element
 
 const slideElement = document.querySelector(".slides");
+
+
+// Create a loop to iterate through all the images in the list
+
+for (let i = 0; i < imageNames.length; i++) {
+
+  const image = imageNames[i];
+
+  console.log(image);
+
+}
