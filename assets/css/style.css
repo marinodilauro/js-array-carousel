@@ -13,6 +13,7 @@
 
 body {
   background-color: rgb(65, 65, 65);
+  height: 100vh;
 }
 
 /* #endregion ||||| COMMON RULES ||||| */
@@ -20,62 +21,49 @@ body {
 
 /* #region ||||| SLIDER ||||| */
 
-.mc_carousel {
+.slider {
   width: 80%;
-  margin: 3rem auto;
-  height: 70vh;
+  height: 80%;
+  margin: auto;
 
-  .slider {
-    flex-grow: 1;
-
-    .slides {
-      height: 100%;
-
-      img {
-        max-width: 100%;
-        object-fit: cover;
-      }
-
-      >img:not(.active) {
-        display: none;
-      }
-    }
-
-  }
-
-  .preview {
-
+  .slides {
+    width: 100%;
     height: 100%;
-    position: relative;
-
-    .controls {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translate(-50%);
-
-      button {
-        background-color: rgba(255, 255, 255, 0.4);
-      }
-
-    }
 
     img {
-      width: 200px;
-      height: calc(100% / 5);
+      max-width: 100%;
       object-fit: cover;
     }
 
-    img:not(.active_preview) {
-      filter: brightness(0.4);
+    >img:not(.active) {
+      display: none;
     }
-
   }
 
 }
+
+.preview {
+  width: 70%;
+  margin: auto;
+  position: relative;
+
+  button {
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 30px;
+  }
+
+  img {
+    width: 235px;
+    height: 130px;
+    object-fit: cover;
+  }
+
+  img:not(.active_preview) {
+    filter: brightness(0.4);
+  }
+
+}
+
+
 
 /* #endregion ||||| SLIDER ||||| */
