@@ -11,7 +11,9 @@
 
 /* #region ||||| COMMON RULES ||||| */
 
-
+body {
+  background-color: rgb(65, 65, 65);
+}
 
 /* #endregion ||||| COMMON RULES ||||| */
 
@@ -19,10 +21,12 @@
 /* #region ||||| SLIDER ||||| */
 
 .mc_carousel {
+  width: 80%;
   margin: 3rem auto;
   height: 70vh;
 
   .slider {
+    flex-grow: 1;
 
     .slides {
       height: 100%;
@@ -40,6 +44,7 @@
   }
 
   .preview {
+
     height: 100%;
     position: relative;
 
