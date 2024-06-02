@@ -56,7 +56,6 @@ nextElement.addEventListener("click", function () {
   const allSlides = document.querySelectorAll(".slides img");
 
   allSlides[activeImage].classList.add("active");
-
   //console.log(activeImage);
 
   // Preview behaviour
